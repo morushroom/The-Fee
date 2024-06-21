@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>The Fee</name>
+    <description>Ludum Dare 49 project</description>
+    <version>1.0</version>
+    <author>BushStudio &amp; Co.</author>
+    <author-email></author-email>
+    <author-website>https://ldjam.com/events/ludum-dare/49/$262000</author-website>
+    <app-id></app-id>
+    <unique-id>2qpiupr2gjili</unique-id>
+    <saved-with-version>27900</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Аудио</plugin>
+        <plugin author="Scirra" id="Browser" version="1">Браузер</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Клавиатура</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Мышь</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Частицы</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Спрайт</plugin>
+        <plugin author="Scirra" id="Text" version="1">Текст</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Плиточный Фон</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Карта плитки</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Касание</plugin>
+        <plugin author="Zack0Wack0/Scirra" id="WebStorage" version="1">WebStorage</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Геймпад</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Anchor" version="1">Якорь</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Вспышка</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Штырь</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Платформа</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Таймер</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Перепрыжка через</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Прокрутить до</behavior>
+        <behavior author="Scirra" id="solid" version="1">Твердый</behavior>
+    </used-behaviors>
+    <used-effects>
+        <effect author="Brad Larson" id="vignette">Виньетка</effect>
+    </used-effects>
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>1280</width>
+        <height>720</height>
+    </window-size>
+    <pixel-rounding>1</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <first-layout>titlescreen</first-layout>
+    <use-loader-layout>1</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">No</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">Low quality</prop>
+        <prop name="Fullscreen scaling quality">Low</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar only</prop>
+        <prop name="Orientations">Landscape</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D web</prop>
+        <prop name="Preview browser">NW.js</prop>
+        <prop name="Sampling">Point</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="WebStorage" sid="1510269620771624">
+            <plugin id="WebStorage" />
+        </object-type>
+        <object-type name="Gamepad" sid="996683554706134">
+            <plugin id="gamepad" />
+        </object-type>
+        <object-type name="Keyboard" sid="4436305314906168">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="3506161195311074">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Touch" sid="2463496682349194">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="Audio" sid="2722091819329769">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type name="Browser" sid="3498868852026895">
+            <plugin id="Browser" />
+        </object-type>
+        <object-type name="player" sid="684741773868499">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Maximum HP" name="MaxHealth" sid="656278346455756" type="number" />
+                <instance-variable comment="Healthpoints" name="Health" sid="250952463018236" type="number" />
+                <instance-variable comment="damage dealt" name="AttackPower" sid="615135666461703" type="number" />
+                <instance-variable comment="Walljump power (UP)" name="wallJumpPowerY" sid="231120304314239" type="number" />
+                <instance-variable comment="Wall jump power (SIDE)" name="wallJumpPowerX" sid="993572932542501" type="number" />
+                <instance-variable name="wallleft" sid="800106829200187" type="number" />
+                <instance-variable name="wallright" sid="817213348018594" type="number" />
+                <instance-variable comment="Speed of falling down, obviously" name="fallSpeed" sid="401662401028222" type="number" />
+                <instance-variable name="legs" sid="802755662275167" type="number" />
+                <instance-variable name="body" sid="335861931667179" type="number" />
+                <instance-variable name="mind" sid="516525387983030" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Прокрутитьдо" sid="335102761852325">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Платформа" sid="945978903125460">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="Таймер" sid="875361748488610">
+                    <behavior id="Timer" />
+                </behavior-type>
+                <behavior-type name="Вспышка" sid="799394380580472">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="597075625162896" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="1" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="127036076970023" speed="4">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="1" name="run" pingpong="0" repeatcount="1" repeatto="0" sid="699690051690925" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="jump" pingpong="0" repeatcount="1" repeatto="0" sid="863999315259035" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="fall" pingpong="0" repeatcount="1" repeatto="0" sid="722309947517785" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="1" name="wall" pingpong="0" repeatcount="1" repeatto="0" sid="876526142200102" speed="7">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="walljump" pingpong="0" repeatcount="1" repeatto="0" sid="497713606234369" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="slash" pingpong="0" repeatcount="1" repeatto="0" sid="200365349266103" speed="5">
+                    <frame duration="1" hotspotX="0.28125" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.71875" y="0.21875" />
+                            <point x="0.71875" y="1" />
+                            <point x="0.28125" y="1" />
+                            <point x="0.28125" y="0.21875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="damage" pingpong="0" repeatcount="1" repeatto="0" sid="962186625069761" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\damage.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="testtileset" sid="415453553176999">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="205722108406646">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="swordbox" sid="434982522088719">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Damages at current time" name="damagecounter" sid="390672450456841" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Штырь" sid="282635196842452">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="998166245675104" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="mechmouse" sid="437852401972977">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="550325415643370" type="number" />
+                <instance-variable name="action" sid="967595308606964" type="string" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Твердый" sid="626477696608697">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Платформа" sid="926347050404296">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="277179156666828" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.65625" />
+                            <point x="1" y="0.65625" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="roomcheck" sid="367547979119486">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Прокрутитьдо" sid="825804565226058">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="roomcheck2" sid="890147361842788">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Прокрутитьдо" sid="182333742114619">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="tileset" sid="935099729218934">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="321061149040948">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Games\my gems\ldjam49\Textures\Tileset.png" />
+            <tiles>
+                <tile id="77">
+                    <collision-poly>
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="78">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="95">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="1" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="96">
+                    <collision-poly>
+                        <point x="0" y="0" />
+                        <point x="1" y="0" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="mechtileset" sid="984210237508727">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="577146232143309">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="C:\Users\Beniska\Dropbox\Мой ПК (PC-PC)\Downloads\tiles.png" />
+            <tiles>
+                <tile id="17">
+                    <collision-poly>
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="21">
+                    <collision-poly>
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="22">
+                    <collision-poly>
+                        <point x="0" y="1" />
+                        <point x="0.00390625" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+                <tile id="23">
+                    <collision-poly>
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                        <point x="0" y="1" />
+                    </collision-poly>
+                </tile>
+            </tiles>
+        </object-type>
+        <object-type name="heart1" sid="240079218895571">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Новая" pingpong="0" repeatcount="0" repeatto="0" sid="516817770016544" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="heart2" sid="880574866509281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Новая" pingpong="0" repeatcount="0" repeatto="0" sid="309586279412065" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="heart3" sid="461370248889160">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Новая" pingpong="0" repeatcount="0" repeatto="0" sid="424100864214851" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="upgrades" sid="593433076834243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="609452541679562" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\upgrades.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="background" sid="596153134087334">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\Games\my gems\ldjam49\background.png" />
+        </object-type>
+        <object-type name="body" sid="630320331588662">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="493300298882927" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\upgradestands.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="legs" sid="189861576124768">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="249908930518458">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Перепрыжкачерез" sid="466638053055222">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="561662037251208" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="spikes" sid="358771702818130">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="534108579803101">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="774802033482763" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\spike.png">
+                        <collision-poly>
+                            <point x="0" y="0.375" />
+                            <point x="1" y="0.375" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="death" sid="830291400393813">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="buttons" sid="642853422631939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="260131099206251" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\menubuttons.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buttonplay" sid="570991472406902">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="763387303641673" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="buttonquit" sid="463214071215184">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="243621631882355" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="brain" sid="461335991331384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="723792156752212" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\brain.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="back" sid="414535563114033">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="925392364724979" speed="5">
+                    <frame duration="1" hotspotX="0.515188" hotspotY="0.83526" original-source="D:\Games\my gems\ldjam49\selo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="finalcutscene" sid="285609028727355">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Твердый" sid="467088939049406">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="822801820338076" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="text1" sid="499580424830306">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="black" sid="909444351168310">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="607197708202787" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="text2" sid="107091888726896">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text" sid="351755693040536">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="text3" sid="605152133254504">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="bush" sid="413585579283627">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Новая" pingpong="0" repeatcount="1" repeatto="0" sid="650818246191530" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Games\my gems\ldjam49\bushstudio.png">
+                        <collision-poly>
+                            <point x="0.305" y="0.2196" />
+                            <point x="0.5" y="0.1364" />
+                            <point x="0.804444" y="0.1408" />
+                            <point x="0.872222" y="0.5" />
+                            <point x="0.709444" y="0.7908" />
+                            <point x="0.5" y="0.81" />
+                            <point x="0.298333" y="0.7852" />
+                            <point x="0.233333" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="hardtilesets" plugin-id="Tilemap" sid="770553869407697">
+            <members>
+                <member>testtileset</member>
+                <member>tileset</member>
+            </members>
+        </family>
+        <family name="damageable" plugin-id="Sprite" sid="804843545959876">
+            <members>
+                <member>mechmouse</member>
+            </members>
+        </family>
+        <family name="roomcheckfam" plugin-id="TiledBg" sid="178649163657097">
+            <members>
+                <member>roomcheck</member>
+                <member>roomcheck2</member>
+            </members>
+        </family>
+        <family name="UI" plugin-id="Sprite" sid="822009138654329">
+            <members>
+                <member>heart1</member>
+                <member>heart2</member>
+                <member>heart3</member>
+                <member>upgrades</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Якорь" sid="630364403692663">
+                    <behavior id="Anchor" />
+                </behavior-type>
+                <behavior-type name="Штырь" sid="713972219870676">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="powerups" plugin-id="Sprite" sid="187926739793108">
+            <members>
+                <member>body</member>
+                <member>legs</member>
+            </members>
+        </family>
+    </families>
+    <layout-folder>
+        <layout>loading.xml</layout>
+        <layout>titlescreen.xml</layout>
+        <layout>leveltest.xml</layout>
+        <layout>leveloriginal.xml</layout>
+        <layout>ending.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>unusedpogomechanics.xml</event-sheet>
+        <event-sheet>etitlescreen.xml</event-sheet>
+        <event-sheet>mechanics.xml</event-sheet>
+        <event-sheet>ending.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="WebStorage" uid="1" />
+        <global-instance type="Gamepad" uid="2">
+            <properties>
+                <analog-deadzone>25</analog-deadzone>
+            </properties>
+        </global-instance>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+        <global-instance type="Audio" uid="6">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Browser" uid="7" />
+    </global-instances>
+    <sounds-folder>
+        <file name="die.ogg" />
+        <file name="walk.ogg" />
+        <file name="bonkhead.ogg" />
+        <file name="hurt.ogg" />
+        <file name="jump.ogg" />
+        <file name="ID01_snd_menu_move.ogg" />
+        <file name="ID02_snd_msg.ogg" />
+        <file name="ID04snd_switchweapon.ogg" />
+        <file name="ID05_snd_menu_prompt.ogg" />
+        <file name="ID0e_snd_get_xp.ogg" />
+        <file name="ID12_snd_menu_select.ogg" />
+        <file name="ID14_snd_health_refill.ogg" />
+        <file name="ID16_snd_chest_open.ogg" />
+        <file name="ID1b_snd_level_up.ogg" />
+        <file name="ID26_snd_get_item.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="pillforsadness.ogg" />
+        <file name="zvyk.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
