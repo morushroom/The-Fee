@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>unusedpogomechanics</name>
+    <events>
+        <event-group description="" sid="420428741330952" title="playermovement">
+            <sub-events>
+                <event-group description="" sid="885177310344366" title="pogojump">
+                    <sub-events>
+                        <event-group description="" sid="991985227071279" title="pogovar">
+                            <sub-events>
+                                <event-group description="" sid="504247587215821" title="swordvector">
+                                    <sub-events>
+                                        <event-block sid="479407031340833">
+                                            <conditions>
+                                                <condition id="0" name="В столкновении с другим объектом" sid="983662398751504" type="swordbox">
+                                                    <param id="0" name="Объект">hardtilesets</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="464117982159683">
+                                                    <conditions />
+                                                    <actions>
+                                                        <action behavior="Платформа" id="9" name="Задать вектор Y" sid="208025784813054" type="player">
+                                                            <param id="0" name="Вектор Y">-100</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="380814837440659">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="269875366060761" type="player">
+                                                            <param id="0" name="Instance variable">wallleft</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                                <event-block sid="651667931965975">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="238320476437325" type="player">
+                                                            <param id="0" name="Instance variable">wallright</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-group>
+                                <event-block sid="685277024185246">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="614074307849433" type="System">
+                                            <param id="0" name="Object to create">swordbox</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">player.ImagePointX(0)</param>
+                                            <param id="3" name="Y">player.imagepointY(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="875299370203563">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="873005715642407" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="268172859293485" type="swordbox" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="949852315616667">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="750138344399818" type="player">
+                                            <param id="0" name="Instance variable">wallleft</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="155867568141936" type="System">
+                                            <param id="0" name="Object to create">swordbox</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">player.ImagePointX(0)</param>
+                                            <param id="3" name="Y">player.imagepointY(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="752096668842376">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="956113379143958" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="638916647877378" type="swordbox" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="633040949469716">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="305091945352869" type="player">
+                                            <param id="0" name="Instance variable">wallright</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="319536819201927" type="System">
+                                            <param id="0" name="Object to create">swordbox</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">player.ImagePointX(0)</param>
+                                            <param id="3" name="Y">player.imagepointY(0)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="570917815335885">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="307046112637595" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="191559136596652" type="swordbox" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-group>
+                        <event-block sid="806866169392283">
+                            <conditions>
+                                <condition behavior="Платформа" id="3" name="Вверх" sid="323013644426006" type="player" />
+                                <condition id="2" name="Клавиша нажата" sid="867103382676012" type="Keyboard">
+                                    <param id="0" name="Клавиша">88</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="313515474987687">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="994664716189551" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Установить анимацию" sid="496143325834531" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="738704850925921" type="player">
+                                            <param id="0" name="Номер кадра">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="316074105773165">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="126895902568794" type="Keyboard">
+                                            <param id="0" name="Клавиша">37</param>
+                                        </condition>
+                                        <condition id="2" name="Клавиша нажата" sid="249129365211355" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="604970338486039" type="player">
+                                            <param id="0" name="Instance variable">wallright</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Установить анимацию" sid="270791927576936" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="216406370299022" type="player">
+                                            <param id="0" name="Номер кадра">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="471085111960604">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="475050836967088" type="Keyboard">
+                                            <param id="0" name="Клавиша">39</param>
+                                        </condition>
+                                        <condition id="2" name="Клавиша нажата" sid="301107063649847" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="528963255459189" type="player">
+                                            <param id="0" name="Instance variable">wallleft</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Установить анимацию" sid="156940665592514" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="747570052408718" type="player">
+                                            <param id="0" name="Номер кадра">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="536062049057989">
+                    <conditions>
+                        <condition id="2" name="Клавиша нажата" sid="299220428247671" type="Keyboard">
+                            <param id="0" name="Клавиша">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Платформа" id="7" name="Установить управление" sid="342199600005475" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="999183410196095">
+                    <conditions>
+                        <condition id="2" name="Клавиша нажата" sid="143056057887307" type="Keyboard">
+                            <param id="0" name="Клавиша">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Платформа" id="7" name="Установить управление" sid="697279953705792" type="player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="237596528250829">
+                    <conditions>
+                        <condition id="2" name="Клавиша нажата" sid="392615844115092" type="Keyboard">
+                            <param id="0" name="Клавиша">38</param>
+                        </condition>
+                        <condition id="2" name="Клавиша нажата" sid="543039964305792" type="Keyboard">
+                            <param id="0" name="Клавиша">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Платформа" id="7" name="Установить управление" sid="292375079455901" type="player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="124251129575564">
+                    <conditions>
+                        <condition id="2" name="Клавиша нажата" sid="179022691532108" type="Keyboard">
+                            <param id="0" name="Клавиша">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Платформа" id="7" name="Установить управление" sid="658504314087327" type="player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="521804214670982">
+                    <conditions>
+                        <condition behavior="Платформа" id="9" name="При приземлении" sid="532106935304094" type="player" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="546670941722711" type="player">
+                            <param id="0" name="Instance variable">wallleft</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="233739293882356" type="player">
+                            <param id="0" name="Instance variable">wallright</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Установить анимацию" sid="189835164502390" type="player">
+                            <param id="0" name="Анимация">&quot;idle&quot;</param>
+                            <param id="1" name="Из">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="196167264757976">
+                    <conditions>
+                        <condition behavior="Платформа" id="3" name="Вверх" sid="583166936526111" type="player" />
+                        <condition behavior="Платформа" id="4" name="Падает" sid="209420833525711" type="player" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="354154157543305">
+                            <conditions>
+                                <condition id="2" name="Клавиша нажата" sid="206060126892633" type="Keyboard">
+                                    <param id="0" name="Клавиша">88</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="118904151634523">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="125556030312741" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Установить анимацию" sid="173411959019488" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="488036518599227" type="player">
+                                            <param id="0" name="Номер кадра">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="469309502663942">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="523051557335898" type="Keyboard">
+                                            <param id="0" name="Клавиша">37</param>
+                                        </condition>
+                                        <condition id="2" name="Клавиша нажата" sid="384952319861040" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="970423779201904" type="player">
+                                            <param id="0" name="Instance variable">wallright</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Установить анимацию" sid="213285638899727" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="246484012883726" type="player">
+                                            <param id="0" name="Номер кадра">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="660397466469493">
+                                    <conditions>
+                                        <condition id="0" name="Клавиша нажата" sid="104354468125583" type="Keyboard">
+                                            <param id="0" name="Клавиша">39</param>
+                                        </condition>
+                                        <condition id="2" name="Клавиша нажата" sid="302745084530571" type="Keyboard">
+                                            <param id="0" name="Клавиша">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="793162268591414" type="player">
+                                            <param id="0" name="Instance variable">wallleft</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="4" name="Установить анимацию" sid="296563877729783" type="player">
+                                            <param id="0" name="Анимация">&quot;pogo&quot;</param>
+                                            <param id="1" name="Из">0</param>
+                                        </action>
+                                        <action id="5" name="Установить кадр" sid="837940677123920" type="player">
+                                            <param id="0" name="Номер кадра">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

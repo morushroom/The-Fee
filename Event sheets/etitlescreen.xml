@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>etitlescreen</name>
+    <events>
+        <variable constant="0" name="music" sid="887663421847012" static="0" type="number">0</variable>
+        <variable constant="0" name="fullscreen" sid="473559386505638" static="0" type="number">0</variable>
+        <event-block sid="476949420846168">
+            <conditions>
+                <condition id="6" name="На объекте щелкнули" sid="375097317687780" type="Mouse">
+                    <param id="0" name="Кнопка мыши">0</param>
+                    <param id="1" name="Тип клика">0</param>
+                    <param id="2" name="Объект щелкнут">buttonplay</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="112772182148897" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="0" name="Играть" sid="142061927915633" type="Audio">
+                    <param id="0" name="Аудио файл">ID05_snd_menu_prompt</param>
+                    <param id="2" name="Петля">0</param>
+                    <param id="3" name="Громкость">-20</param>
+                    <param id="1" name="Метка (необязательно)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="455574976836863">
+                    <conditions />
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="343895573689682" type="System">
+                            <param id="0" name="Layout">leveloriginal</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="827819617156084">
+            <conditions>
+                <condition id="6" name="На объекте щелкнули" sid="637775800633515" type="Mouse">
+                    <param id="0" name="Кнопка мыши">0</param>
+                    <param id="1" name="Тип клика">0</param>
+                    <param id="2" name="Объект щелкнут">buttonquit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Закрыть" sid="235216894098692" type="Browser" />
+            </actions>
+        </event-block>
+        <event-block sid="857546551080941">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="955195428300351" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Играть" sid="733923193758710" type="Audio">
+                    <param id="0" name="Аудио файл">pillforsadness</param>
+                    <param id="2" name="Петля">1</param>
+                    <param id="3" name="Громкость">-10</param>
+                    <param id="1" name="Метка (необязательно)">&quot;titlemusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="481533785880602">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="476701860929206" type="System" />
+            </conditions>
+            <actions>
+                <action id="6" name="Остановить" sid="751342403676205" type="Audio">
+                    <param id="0" name="Тег">&quot;titlemusic&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
